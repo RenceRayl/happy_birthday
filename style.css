@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff5f7;
+    color: #59434b;
+    overflow-x: hidden;
+}
+
+
+
+nav {
+    background: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px #00000010;
+}
+
+nav h2 {
+    color: #d66b89;
+    font-family: 'Playfair Display', serif;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #59434b;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d66b89;
+}
+
+
+
+button {
+    background: #d66b89;
+    color: white;
+    border: none;
+    padding: 13px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #b94f70;
+    transform: translateY(-3px);
+}
+
+
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 70px 10%;
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.small-text {
+    color: #d66b89;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 65px;
+    color: #d66b89;
+    margin: 15px 0;
+}
+
+.hero h2 {
+    margin-bottom: 20px;
+}
+
+.hero p {
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+.hero-image img {
+    width: 350px;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 180px 180px 20px 20px;
+    box-shadow: 10px 10px 0 #f3c5d2;
+}
+
+
+
+.gift-section {
+    padding: 70px 20px;
+    text-align: center;
+    background: white;
+}
+
+.gift-box {
+    font-size: 100px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.4s;
+}
+
+.gift-box:hover {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.gift-box p {
+    font-size: 13px;
+    color: #d66b89;
+}
+
+.letter {
+    display: none;
+    max-width: 600px;
+    margin: 30px auto 0;
+    padding: 35px;
+    background: #fff5f7;
+    border: 2px dashed #e7a1b5;
+    border-radius: 20px;
+    animation: appear 0.6s ease;
+}
+
+.letter h2 {
+    color: #d66b89;
+    margin-bottom: 20px;
+}
+
+.letter p {
+    line-height: 2;
+}
+
+.letter h3 {
+    color: #d66b89;
+    margin: 20px 0;
+}
+
+
+
+.gallery {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.gallery h2,
+.cake-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 35px;
+    color: #d66b89;
+}
+
+.gallery > p {
+    margin: 15px 0 35px;
+}
+
+.photo-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.photo-container img {
+    width: 260px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.4s;
+    box-shadow: 0 5px 15px #00000015;
+}
+
+.photo-container img:hover {
+    transform: scale(1.05) rotate(2deg);
+}
+
+
+
+.photo-viewer {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #000000e8;
+    z-index: 500;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.photo-viewer img {
+    max-width: 90%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+.photo-viewer span {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+}
+
+
+
+.cake-section {
+    padding: 80px 20px;
+    background: white;
+    text-align: center;
+}
+
+.cake-section > p {
+    margin: 15px 0 40px;
+}
+
+.cake {
+    margin: 60px auto 30px;
+    width: 230px;
+    position: relative;
+}
+
+.cake-top {
+    height: 60px;
+    background: #f5b4c8;
+    border-radius: 15px 15px 5px 5px;
+}
+
+.cake-bottom {
+    height: 75px;
+    background: #d66b89;
+    border-radius: 5px 5px 15px 15px;
+}
+
+.candles {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: absolute;
+    top: -65px;
+    width: 100%;
+}
+
+.candles span {
+    font-size: 35px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.candles span:hover {
+    transform: translateY(-10px);
+}
+
+#wishMessage {
+    color: #d66b89;
+    margin: 25px;
+}
+
+
+
+.music-section {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.music-section h2 {
+    font-family: 'Playfair Display', serif;
+    color: #d66b89;
+    margin-bottom: 25px;
+}
+
+
+
+.final-message {
+    text-align: center;
+    background: #f8dce5;
+    padding: 80px 20px;
+}
+
+.final-message h1 {
+    color: #c65e7e;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+}
+
+.final-message p {
+    line-height: 2;
+}
+
+.final-message h2 {
+    margin-top: 25px;
+    color: #d66b89;
+}
+
+footer {
+    text-align: center;
+    background: #d66b89;
+    color: white;
+    padding: 25px;
+}
+
+
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    color: #e78ba5;
+    pointer-events: none;
+    z-index: 200;
+    animation: floatUp 5s linear forwards;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.confetti {
+    position: fixed;
+    top: -20px;
+    z-index: 1000;
+    pointer-events: none;
+    animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 50px 7%;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-image img {
+        width: 260px;
+        height: 310px;
+    }
+
+    .gallery h2,
+    .cake-section h2 {
+        font-size: 28px;
+    }
+
+    .photo-container img {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .letter {
+        padding: 25px;
+    }
+
+    .final-message h1 {
+        font-size: 30px;
+    }
+}
